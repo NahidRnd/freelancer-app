@@ -1,0 +1,260 @@
+@import url("/fonts.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  :root{
+    &,
+    &.light-mode{
+      /* --primary-color: #578E7E;
+      --primary-h-color: #29463e;
+      --dark-color: #3D3D3D;
+      --secondary-color: #F5ECD5;
+      --light-color: #FFFAEC;
+      --txt-def: #666;
+      --bg-gr: #f7f6f9;
+      --bg-table: #fff;
+      --text-table: #151232;
+      --border-color: #f0f0f0;
+      */
+      --gradient-color-primary: #ffe6dc;
+      --gradient-color-secondary: #f398dd;
+      --btn-gr-primary: #ff74d9;
+      --btn-gr-secondary: #fe667f;
+      --primary-color: #fca6b1;
+      --primary-h-color: #fe667f;
+      --dark-color: #3D3D3D;
+      --secondary-color: #fa83a8;
+      --light-color: #FFFAEC;
+      --txt-def: #9a9a9a;
+      --bg-gr: #f7f6f9;
+      --bg-table: #fff;
+      --text-table: #0c1321;
+      --border-color: #080808;
+      --bg-input: #ddcadf;
+      --border-gr: #dec5e2;
+      --border-light: #f0f0f0;
+      /*
+
+      #fbbdd9
+      #f399da
+
+      #d27fcd
+      #fa6ba2
+      #fca6b1
+      #e077be
+
+      gradient
+      #ff74d9
+      #fe667f
+
+      #ea6fba
+      #fa83a8
+
+      #ffe6dc
+      #f398dd
+
+      hover:
+      #fff5f2
+      #fff1f6
+      */
+    }
+    &.dark-mode{
+      --primary-color: #fca6b1;
+      --primary-h-color: #fe667f;
+      --dark-color: #F5ECD5;
+      --secondary-color: #F5ECD5;
+      --light-color: #FFFAEC;
+      --txt-def: #FFFAEC;
+      --bg-gr: #303030;
+      --bg-table: #3D3D3D;
+      --text-table: #F7FAFC;
+      --border-color: #4a4a4a;
+
+      .bg-input-dark {
+        background-color: #5a5a5a;
+      }
+      .auth-dark{
+        background-color: #080808;
+      }
+    }
+  }
+}
+
+@theme {
+  --color-pr: #ff74d9;
+  --color-sc: #fe667f;
+}
+
+
+@layer components{
+  .textField__input{
+    @apply w-full py-3 px-4 rounded-md text-dark border border-gray-300 transition-all duration-300 ease-in-out;
+  }
+  .text--header{
+    @apply font-bold text-lg mb-2;
+  }
+  .btn{
+    @apply transition-all duration-300 border border-solid text-center px-5 py-3 rounded-md;
+
+  }
+  .btn--gr{
+    @apply bg-gradient-to-r from-btnS to-btnP text-white hover:bg-gradient-to-r hover:from-btnS hover:to-btnS;
+  }
+  .btn--primary{
+    @apply bg-primary border-primary text-white hover:bg-primaryH hover:border-primaryH;
+  }
+  .btn--dark{
+    @apply bg-textT border-primary text-bgG hover:bg-primaryH hover:border-primaryH;
+  }
+  .btn--danger{
+    @apply bg-white text-red-600 border-red-600 hover:bg-red-600 hover:text-white;
+  }
+  .box{
+    @apply border rounded-lg px-12 py-14;
+  }
+  .badge {
+    @apply inline-block whitespace-nowrap rounded-md px-2 py-0.5;
+  }
+  .badge--secondary {
+    @apply bg-gray-500 text-gray-100;
+  }
+  .badge--success {
+    @apply bg-green-500 text-white;
+  }
+  .badge--error {
+    @apply bg-red-500 text-white;
+  }
+}
+.rti--container{
+  /* --rti-tag: #6B7280 !important; */
+  --rti-tag: #4b5563 !important;
+  
+}
+
+.rti--input{
+  background-color: #dedede;
+  padding: 0.3rem 1rem;
+  border-radius: 4px;
+}
+
+.rti--tag{
+  background-color: #4b5563;
+  color: #fff;
+}
+
+*{
+  outline: none;
+  text-align: right;
+}
+#root{
+  max-width: 100%;
+}
+body {
+  font-family: "Vazir";
+  background-color: #fff;
+  color: #000;
+  /* margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh; */
+  /* background-color: var(--primary-color); */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container{
+  padding: 3% 4%;
+  margin: auto;
+  max-width: 1440px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p{
+  color: #959595;
+}
+
+.slick-slider{
+  width: 80%;
+  margin: auto;
+}
+
+.bg-input input{
+  background-color: #ddcadf;
+}
+
+.slick-prev:before, .slick-next:before{
+  color: #000;
+}
+
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+/* TABLE */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table .title-row {
+  /* background-color: rgb(var(--color-secondary-100)); */
+}
+
+table td,
+table th {
+  border-bottom: 1px solid #eee;
+  text-align: right;
+  white-space: nowrap;
+}
+
+table th {
+  padding: 0.6rem 1rem;
+  /* color: rgb(var(--color-secondary-600)); */
+  font-size: 0.9rem;
+}
+
+table td {
+  font-size: 0.85rem;
+  padding: 1rem 1rem;
+  /* color: rgb(var(--color-secondary-600)); */
+}
+
+
+
+#profileImage {
+  display: none;
+}
+
+
+
+
+
+/**************  RESPONSIVE   ***************/

@@ -40,12 +40,6 @@ class Application {
       cors({ credentials: true, origin: process.env.ALLOW_CORS_ORIGIN })
     );
 
-//added from copilot
-this.#app.use(cors(corsOptions));
-this.#app.options('*', cors(corsOptions)); 
-this.#app.use('/api', allRoutes);
-//added from copilot
-
 
     this.#app.use(express.json());
     this.#app.use(express.urlencoded({ extended: true }));
